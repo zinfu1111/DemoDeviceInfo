@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,10 @@
 		9C0F5DCA26FD9BA700345E65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C0F5DC826FD9BA700345E65 /* Main.storyboard */; };
 		9C0F5DCC26FD9BAB00345E65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C0F5DCB26FD9BAB00345E65 /* Assets.xcassets */; };
 		9C0F5DCF26FD9BAB00345E65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C0F5DCD26FD9BAB00345E65 /* LaunchScreen.storyboard */; };
+		9C0F5DD826FD9BBC00345E65 /* DeviceKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9C0F5DD726FD9BBC00345E65 /* DeviceKit */; };
+		9C0F5DDA26FDB53100345E65 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0F5DD926FDB53100345E65 /* APIService.swift */; };
+		9C0F5DDC26FDB54F00345E65 /* DeviceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0F5DDB26FDB54F00345E65 /* DeviceInfo.swift */; };
+		9C0F5DDE26FDB56300345E65 /* Ext+UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0F5DDD26FDB56300345E65 /* Ext+UIDevice.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,9 @@
 		9C0F5DCB26FD9BAB00345E65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C0F5DCE26FD9BAB00345E65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C0F5DD026FD9BAB00345E65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C0F5DD926FDB53100345E65 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		9C0F5DDB26FDB54F00345E65 /* DeviceInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInfo.swift; sourceTree = "<group>"; };
+		9C0F5DDD26FDB56300345E65 /* Ext+UIDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+UIDevice.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C0F5DD826FD9BBC00345E65 /* DeviceKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +64,58 @@
 		9C0F5DC126FD9BA700345E65 /* DemoDeviceInfo */ = {
 			isa = PBXGroup;
 			children = (
-				9C0F5DC226FD9BA700345E65 /* AppDelegate.swift */,
-				9C0F5DC426FD9BA700345E65 /* SceneDelegate.swift */,
-				9C0F5DC626FD9BA700345E65 /* ViewController.swift */,
-				9C0F5DC826FD9BA700345E65 /* Main.storyboard */,
-				9C0F5DCB26FD9BAB00345E65 /* Assets.xcassets */,
-				9C0F5DCD26FD9BAB00345E65 /* LaunchScreen.storyboard */,
+				9C0F5DE326FE34B900345E65 /* Extension */,
+				9C0F5DE226FE33A700345E65 /* Helper */,
+				9C0F5DE126FE339600345E65 /* Controllers */,
+				9C0F5DE026FE338B00345E65 /* Models */,
+				9C0F5DDF26FE338000345E65 /* Resource */,
 				9C0F5DD026FD9BAB00345E65 /* Info.plist */,
 			);
 			path = DemoDeviceInfo;
+			sourceTree = "<group>";
+		};
+		9C0F5DDF26FE338000345E65 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				9C0F5DC226FD9BA700345E65 /* AppDelegate.swift */,
+				9C0F5DC426FD9BA700345E65 /* SceneDelegate.swift */,
+				9C0F5DC826FD9BA700345E65 /* Main.storyboard */,
+				9C0F5DCB26FD9BAB00345E65 /* Assets.xcassets */,
+				9C0F5DCD26FD9BAB00345E65 /* LaunchScreen.storyboard */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		9C0F5DE026FE338B00345E65 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9C0F5DDB26FDB54F00345E65 /* DeviceInfo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9C0F5DE126FE339600345E65 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9C0F5DC626FD9BA700345E65 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		9C0F5DE226FE33A700345E65 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				9C0F5DD926FDB53100345E65 /* APIService.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		9C0F5DE326FE34B900345E65 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				9C0F5DDD26FDB56300345E65 /* Ext+UIDevice.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +134,9 @@
 			dependencies = (
 			);
 			name = DemoDeviceInfo;
+			packageProductDependencies = (
+				9C0F5DD726FD9BBC00345E65 /* DeviceKit */,
+			);
 			productName = DemoDeviceInfo;
 			productReference = 9C0F5DBF26FD9BA700345E65 /* DemoDeviceInfo.app */;
 			productType = "com.apple.product-type.application";
@@ -103,7 +157,7 @@
 				};
 			};
 			buildConfigurationList = 9C0F5DBA26FD9BA700345E65 /* Build configuration list for PBXProject "DemoDeviceInfo" */;
-			compatibilityVersion = "Xcode 13.0";
+			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -111,6 +165,9 @@
 				Base,
 			);
 			mainGroup = 9C0F5DB626FD9BA700345E65;
+			packageReferences = (
+				9C0F5DD626FD9BBC00345E65 /* XCRemoteSwiftPackageReference "DeviceKit" */,
+			);
 			productRefGroup = 9C0F5DC026FD9BA700345E65 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -140,7 +197,10 @@
 			files = (
 				9C0F5DC726FD9BA700345E65 /* ViewController.swift in Sources */,
 				9C0F5DC326FD9BA700345E65 /* AppDelegate.swift in Sources */,
+				9C0F5DDA26FDB53100345E65 /* APIService.swift in Sources */,
 				9C0F5DC526FD9BA700345E65 /* SceneDelegate.swift in Sources */,
+				9C0F5DDC26FDB54F00345E65 /* DeviceInfo.swift in Sources */,
+				9C0F5DDE26FDB56300345E65 /* Ext+UIDevice.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +357,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -325,6 +386,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -360,6 +422,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9C0F5DD626FD9BBC00345E65 /* XCRemoteSwiftPackageReference "DeviceKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devicekit/DeviceKit.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9C0F5DD726FD9BBC00345E65 /* DeviceKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9C0F5DD626FD9BBC00345E65 /* XCRemoteSwiftPackageReference "DeviceKit" */;
+			productName = DeviceKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9C0F5DB726FD9BA700345E65 /* Project object */;
 }
